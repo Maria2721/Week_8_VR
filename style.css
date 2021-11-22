@@ -1,0 +1,139 @@
+.container-fluid {
+    display: grid;
+    padding-top: 5vh;
+    padding-left: 10vw;
+    grid-template-areas: "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 1fr 10vh;
+    grid-gap: 0px;
+}
+
+header {
+    display: grid;
+    grid-area: header;
+    grid-template-areas: "logo headline btn__basket";
+    grid-template-columns: 1fr 1fr 8fr;
+    grid-template-rows: 1fr;
+    justify-items: end;
+    align-items: center;
+    margin-left: -10vw;
+    margin-right: 4vw;
+}
+
+.logo {
+    grid-area: logo;
+
+}
+
+.headline {
+    grid-area: headline;
+    padding-left: 10px;
+}
+
+.btn__basket {
+    grid-area: btn__basket;
+    width: 115px;
+    height: 38px;
+}
+
+.btn__buy {
+    width: 270px;
+    height: 10vh;
+}
+
+.btn__sub {
+    width: 135px;
+    height: 38px;
+    margin-top: 15px;
+}
+
+button {
+    background: #5222D0;
+    border-radius: 100px;
+    color: #FFFFFF;
+}
+
+.redbox {
+    background: #EC615B;
+}
+
+footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-areas: "footer1 footer2 footer3 footer4 ...";
+    grid-template-columns: repeat(4, 1fr) 4fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    color: #000;
+    margin-bottom: 8vh;
+}
+
+.footer__item1 {
+    grid-area: footer1;
+}
+
+.footer__item2 {
+    grid-area: footer2;
+}
+
+.footer__item3 {
+    grid-area: footer3;
+}
+
+.footer__item4 {
+    grid-area: footer4;
+}
+
+/*форматирование текста*/
+
+.btn__basket,
+.btn__sub,
+.btn__buy,
+h1,
+h5 {
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 5vw;
+    line-height: 120%;
+}
+
+h5 {
+    font-size: 30px;
+    line-height: 120%;
+}
+
+.bbtn__basket,
+.btn__sub {
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.btn__buy {
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.vr__content,
+.card-text,
+.footer {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+}
+
+@media screen and (max-width: 767px) {
+    footer {
+        grid-template-areas: "footer1 footer2 footer3 footer4";
+        grid-template-columns: 1.5fr repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
